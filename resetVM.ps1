@@ -41,7 +41,7 @@ if (!(Test-Connection -Cn $server -BufferSize 16 -Count 4 -ea 0 -quiet)) {
 
     }
 
-ELSE {“Successful `t`t" + $Time.DateTime + "`t`t" + ($endTime – $Time).TotalSeconds + " seconds" | Out-File $Log -Append; send-mailmessage -from "<$server@somewhere.com>" -to "Some One <someone@somewhere.com>" -subject "$server is responding" -body "Test Server is responding again and was not reset" -smtpserver 1.2.3.4;} #end if
+ELSE {“Successful `t`t" + $Time.DateTime + "`t`t" + ($endTime – $Time).TotalSeconds + " seconds" | Out-File $Log -Append; send-mailmessage -from "<$server@somewhere.com>" -to "Some One <someone@somewhere.com>" -subject "$server is responding" -body "Test Server is responding again and was not reset" -smtpserver 1.2.3.4;}
 
 
 }
